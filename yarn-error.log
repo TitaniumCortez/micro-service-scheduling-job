@@ -1,0 +1,31 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Renan\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\Renan\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Renan\bin;C:\Python27;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\Renan\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\apache-maven-3.6.3\bin;C:\Users\Renan\AppData\Local\Microsoft\WindowsApps;C:\Users\Renan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Renan\AppData\Roaming\npm;C:\Users\Renan\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\apache-maven-3.6.3\bin;C:\src\flutter\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\Renan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96528:59)
+      at Object.<anonymous> (C:\Users\Renan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:88889:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Renan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\Renan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

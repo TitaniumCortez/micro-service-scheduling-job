@@ -1,0 +1,9 @@
+{
+  "name": "micro-service-scheduling-job",
+  "version": "1.0.0",
+  "description": "Processador de jobs",
+  "main": "index.js",
+  "repository": "https://github.com/TitaniumCortez/micro-service-scheduling-job",
+  "author": "Renan Cortez",
+  "license": "MIT"
+}
