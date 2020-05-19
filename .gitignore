@@ -3,3 +3,7 @@ node_modules
 
 #yarn error
 yarn-error.log
+
+
+#.vscode
+.vscode

@@ -1,9 +1,8 @@
 import winston from 'winston';
-import options from './logger.options';
 
 const { format } = winston;
-//Configurando log do microsservico
 
+//Configurando log do microsservico
 const logger = winston.createLogger({
     format: winston.format.json(),
     transports: [
