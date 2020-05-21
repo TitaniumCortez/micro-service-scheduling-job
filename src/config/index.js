@@ -3,5 +3,5 @@ export default {
     application_prefix: process.env.application_prefix || 'scheduling',
     timeZone: 'America/Sao_Paulo',
     formatDate: 'YYYY-MM-DD HH:MM:ss',
-    maxHourJob: 8
+    periodoExecucao: 8
 }

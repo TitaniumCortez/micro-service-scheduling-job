@@ -8,8 +8,8 @@ import props from '../config';
 export class SchedulingJobServices {
 
     constructor(context = {}) {
-        this.startDate = context.nowTimeStamp || this._getNowDate();
-        this.endDate = context.nowTimeStamp || this._getEndDate();
+        this.startDate = context.startDate || this._getNowDate();
+        this.endDate = context.endDate || this._getEndDate();
     }
 
     async processJob(data) {
@@ -24,8 +24,14 @@ export class SchedulingJobServices {
         if (validDate)
             return new BadRequest({ message: 'Insert a valid date' });
 
+        const newprops = {
+            ...props,
+            dataInicio: this.startDate,
+            dataFim: this.endDate,
+        }
+
         // Aplica regra de negocio
-        const result = await this._businnesRule({ props, data });
+        const result = await this._businnesRule({ props: newprops, data });
         return result;
     }
 
