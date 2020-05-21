@@ -9,9 +9,7 @@ const router = express.Router();
 // Rota HealthCheck
 router.get('/healthcheck', (req, res) => { res.send(200, { message: 'It\'s Alive!' }); })
 
-// Obter lista de jobs
-router.get('/', (req, res, next) => SchedulingController.getJobs(req, res, next));
-// Cadastro de um novo job
+// Envio de um novo job
 router.post('/', (req, res, next) => SchedulingController.getJobs(req, res, next));
 
 // Documentação da api
