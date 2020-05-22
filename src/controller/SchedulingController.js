@@ -4,6 +4,7 @@ import { SchedulingJobServices } from '../services/schedulingJob.services';
 class SchedulingController extends BaseController {
 
     constructor() {
+        super();
         this.schedulingJobServices = new SchedulingJobServices();
     }
 

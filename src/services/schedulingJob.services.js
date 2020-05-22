@@ -145,7 +145,7 @@ export class SchedulingJobServices {
 
     // horario atual mais 1 dia para usar como data final da janela
     _getEndDate() {
-        return moment().format(props.formatDate);
+        return moment().add(1, 'days').format(props.formatDate);
     }
 
     // Valida se data informada é menor que a data atual

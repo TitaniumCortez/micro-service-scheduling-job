@@ -9,7 +9,7 @@ export class BaseController {
     }
 
     _sendMenssage({ statusCode, response, data }) {
-        return response.send(statusCode, data);
+        return response.send(data);
     };
 
     _handlerError({ response, error }) {
@@ -17,7 +17,7 @@ export class BaseController {
             error = new InternalError();
 
         const { statusCode, type } = error;
-        return response.send(error.statusCode, { code: statusCode, message: type });
+        return response.status(statusCode).send({ code: statusCode, message: type });
     };
 
 }

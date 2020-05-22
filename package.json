@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon --exec sucrase-node ./src/index.js",
-    "debug": "node --inspect-brk -r sucrase/register ./src/index.js",
+    "start:debug": "node --inspect-brk -r sucrase/register ./src/index.js",
+    "build": " sucrase ./src -d ./dist --transforms imports",
+    "start:prod": "node  dist/app",
     "test": "jest"
   },
   "dependencies": {

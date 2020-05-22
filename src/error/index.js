@@ -3,8 +3,18 @@ class BadRequest extends Error {
         super(error.message)
 
         this.statusCode = 400
-        this.name = 'NotFoundError'
-        this.type = 'Not found'
+        this.name = 'BadRequest'
+        this.type = 'Bad Request'
+    }
+}
+
+class NotFound extends Error {
+    constructor(error = {}) {
+        super(error.message)
+
+        this.statusCode = 404
+        this.name = 'NotFound'
+        this.type = 'Not Found'
     }
 }
 
@@ -18,4 +28,4 @@ class InternalError extends Error {
     }
 }
 
-export { BadRequest, InternalError };
+export { BadRequest, InternalError , NotFound };

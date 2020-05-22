@@ -1,0 +1,109 @@
+swagger: "2.0"
+info:
+  description: "description `dc`"
+  version: "1.0.0"
+  title: "Scheduling Jobs"
+
+host: "localhost:8081"
+basePath: "/scheduling"
+
+schemes:
+- "https"
+- "http"
+paths:
+  /:
+    get:
+      tags:
+      - "scheduling"
+      summary: "Add a new pet to the store"
+      description: ""
+      operationId: "addPet"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Pet object that needs to be added to the store"
+        required: true
+        schema:
+          $ref: "#/definitions/scheduling"
+      responses:
+       '200':  
+        description: A JSON array of jobs
+        schema:
+          $ref: '#/definitions/sucess'
+          
+       '400':
+        description: A JSON error
+        schema:
+          $ref: '#/definitions/error'
+
+       '404':
+        description: A JSON error
+        schema:
+          $ref: '#/definitions/error'
+
+       '500':
+        description: A JSON error
+        schema:
+          $ref: '#/definitions/error'
+
+  /healthcheck:
+    get:
+      tags:
+      - "scheduling"
+      summary: "Add a new pet to the store"
+      description: ""
+      operationId: "healthcheck"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Pet object that needs to be added to the store"
+        required: true
+        schema:
+          $ref: "#/definitions/scheduling"
+      responses:
+       '200':  
+        description: OK
+
+
+definitions:
+  scheduling:
+    type: "array"
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        description: 
+          type: string
+        maxDate: 
+          type: string
+        estimatedDate:
+          type: string
+  sucess:
+    type: array
+    items:
+      type: array
+      items:
+        type: integer
+  
+  error:
+   type: object
+   properties:
+    statusCode: 
+      type: integer
+    name:
+      type: string
+    type:
+      type: string
+    
+    
+            
+      

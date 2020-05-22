@@ -1,6 +1,7 @@
 import express from 'express'
 import requestId from 'express-request-id';
 import loggerMiddleware from './middleware/logger.middleware';
+import { clientErrorHandler, exceptionFilter } from './middleware/exceptionFilter.middleware';
 import bodyParser from 'body-parser';
 import router from './router';
 import props from './config';
@@ -21,6 +22,9 @@ app.use(loggerMiddleware);
 
 // Configurando as rotas
 app.use(`/${props.application_prefix}`, router);
+
+//Filtro de error
+app.all('*', clientErrorHandler)
 
 // Porta onde o servidor ficará ouvindo
 const server = app.listen(props.port, () => {
