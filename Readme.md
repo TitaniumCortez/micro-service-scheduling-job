@@ -29,25 +29,12 @@ Microservico desenvolvido para agendamentos de processos para execução respeit
 ```
 npm install 
 ```
-ou
-
-```
-yarn 
-```
-
 
 # Start 
 
 ```
   npm run start
 ```
-
-ou
-
-```
-yarn start
-```
-
 
 - Executando os teste
 
@@ -56,17 +43,11 @@ yarn start
   npm run test
 ```
 
-ou
+# Metodos
 
-```
-yarn test
-```
-
-
-## Metodos
-
-`POST: /scheduling`
+## `POST: /scheduling`
 Agendamento de jobs, body de request. 
+
 ```
  [
     {
@@ -76,12 +57,13 @@ Agendamento de jobs, body de request.
         "estimatedTime": "2 horas"
     }
  ]
+
 ```
 
-`GET: /scheduling/healthcheck`  
+## `GET: /scheduling/healthcheck`  
 Health check do microsservico.
 
-`GET: /scheduling/swagger` 
+## `GET: /scheduling/swagger` 
 Exibe o swagger do microsservicos 
 
 
